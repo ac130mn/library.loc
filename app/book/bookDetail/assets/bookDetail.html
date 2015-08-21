@@ -1,0 +1,29 @@
+<div ng-hide="bookNotFound">
+	<div class="row">
+		<div class="col-md-3">
+			<img ng-src="book/assets/img/books/{{img}}" alt="1.png" class="img-thumbnail">
+		</div>
+		<div class="col-md-9">
+			<h2>
+				{{title}}
+			</h2>
+			<h3>
+				<a href="#/" ng-repeat="author in authors">{{author}} </a>
+			</h3>
+			<h3>
+				Цена: <span class="price">{{price}} руб.</span>
+				<button class="btn btn-success btn-lg">Купить</button>
+			</h3>
+		</div>					
+	</div>
+	<div>
+		<h3 class="page-header">
+			Краткое описание:
+		</h3>
+		<p>{{description}}</p>
+			
+	</div>
+</div>
+<div ng-show="bookNotFound">
+	<h1 clsas="page-header">К сожалению, такого товара не существует</h1>
+</div>
